@@ -1,8 +1,9 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/navbar";
-import { Shop } from "./pages/shop/shop";
-import { Contact } from "./pages/contact";
+import  {Shop} from "./pages/shop/shop";
+import  Login  from "./pages/content/Login";
+import  Signup from  "./pages/content/Signup"
 import { Cart } from "./pages/cart/cart";
 import { ShopContextProvider } from "./context/shop-context";
 
@@ -13,8 +14,10 @@ function App() {
         <Router>
           <Navbar />
           <Routes>
+        
             <Route path="/" element={<Shop />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/Signup" element={<Signup />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
         </Router>
